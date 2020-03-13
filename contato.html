@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu Site</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+            <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Vingadores</a>
+                      </div>
+                  
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                          <li><a href="#">Contato</a></li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Saiba mais <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Separated link</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">One more separated link</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        
+                      </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                  </nav>
+    </header>
+
+    <section>
+       <!-- Button trigger modal -->
+        <button type="button" id="btn-vingador" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            Clique aqui para saber quem vai te dar suporte
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-body" id="vingador">
+              ...
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="col-md-6">
+                                <img class="logo" src="https://www.tapisrouge.com.br/wp-content/uploads/2019/11/Avengers-Logo-PNG-Transparent-Avengers-Logo-715x715.png" alt="Logo">
+                            </div>
+                            <div class="col-md-6">
+                                <h2 class="titulo-logo">Vingadores LTDA.</h2>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">Sobre nós</a><br/>
+                            <a href="#">Contato</a><br/>
+                            <a href="#">Trabalhe Conosco</a><br/>
+                            <a href="#">Endereço</a><br/>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="col-md-6 box-facebook">
+                                <a  href="https://facebook.com" target="_newblank">
+                                    <img class="facebook" src="https://www.facebook.com/images/fb_icon_325x325.png" alt="logo facebook">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    <script>
+        $('document').ready(function() {
+
+            var vingadores = ["https://observatoriodocinema.elav.tmp.br/wp-content/uploads/2019/08/CAptain-America.jpg", "https://br.web.img3.acsta.net/newsv7/19/02/08/16/58/1140437.jpg", "https://www.einerd.com.br/wp-content/uploads/2019/06/wolverine-x-men-fenix-negra-890x501.jpg"];
+
+            $('#btn-vingador').on('click', function() {
+                
+                var num = Math.floor(Math.random() * 3);
+                
+                $('#vingador').html("<img style='display:block;width:100%;' src="+vingadores[num]+">");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

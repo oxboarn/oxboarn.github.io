@@ -1,0 +1,34 @@
+.footer {
+    background-color: #34495e;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+}
+.logo {
+    display: block;
+    margin: 12px 0;
+    width: 50%;
+}
+.titulo-logo {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 22px 0;
+    margin-left: -100px;
+}
+.box-facebook {
+    background-color: #4267b2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+.facebook {
+    display: block;
+    width: 10%;
+    float: right;
+    transition: 1s;
+}
+.facebook:hover {
+    margin-right: 10px;
+}
